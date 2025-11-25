@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "member.h"
-#include "diet.h"
+#include "diet.h"  //member.h is indirectly included in this
 
 void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]) {
     FILE *file = fopen("exercise_database.txt", "r");
@@ -13,6 +12,9 @@ void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_catego
 
     char line[100];
     int current_part_index = -1;
+
+   // Initialize counts to zero
+    for(int i=0; i < num_focus_areas; i++) counts[i] = 0;
 
     while (fgets(line, sizeof(line), file) != NULL) {
         // Check for category headers
@@ -60,16 +62,16 @@ Member* add_new_member(Member* head) {
     }
 
     printf("Enter member's name: ");
-    scanf("%49s", newNode->name); //%49s is used becoz the name array can hold only 50 chars
-    clear_input_buffer();             //and the 50th char is /0
+    fgets(newNode->name, 50, stdin);
+    newNode->name[strcspn(newNode->name, "\n")] = 0; // Remove newline
 
     printf("Enter age: ");
     scanf("%d", &newNode->age);
     clear_input_buffer();
 
     printf("Enter sex: ");
-    scanf("%9s", newNode->sex);
-    clear_input_buffer();  // max length 10 including null (/10)
+    fgets(newNode->sex, 10, stdin);
+    newNode->sex[strcspn(newNode->sex, "\n")] = 0; // Remove newline
     
     printf("Enter height (in meters): ");
     scanf("%f", &newNode->height);
@@ -80,9 +82,9 @@ Member* add_new_member(Member* head) {
     clear_input_buffer();
 
     newNode->bmi = calculate_bmi(newNode->height, newNode->weight);
-    printf("Calculated BMI: %.2f\n", newNode->bmi);   //%.2f is used to round-off bmi to 2 decimal places
+    printf("Calculated BMI: %.2f\n", newNode->bmi);
 
-    // Initialize all log head pointers to NULL
+    // CRITICAL: Initialize all log head pointers to NULL
     for(int i=0; i < num_days; i++) {
         newNode->workout_heads[i] = NULL;
         newNode->diet_heads[i] = NULL;
@@ -104,31 +106,28 @@ void add_workout_log(Member* member, ExerciseItem db[num_focus_areas][max_exerci
     int day_index = get_day_index();
     int part_index = get_body_part_index();
     
+    char* body_part_names[] = {"Chest", "Back", "Legs", "Arms", "Shoulders"};
     char add_another;
+
     do {
-        printf("\n--- Exercises for this Body Part ---\n");
+        printf("\n--- Exercises for %s ---\n", body_part_names[part_index]);
         for (int i = 0; i < counts[part_index]; i++) {
-            printf("  %d: %s\n", db[part_index][i].id, db[part_index][i].name);
+            // Display a 1-based number for the user to select
+            printf("  %d: %s\n", i + 1, db[part_index][i].name);
         }
 
         int choice = -1;
-        printf("Select an exercise by ID: ");
+        printf("Select an exercise by number (1-%d): ", counts[part_index]);
         scanf("%d", &choice);
         clear_input_buffer();
 
-        // Find the exercise in the database
-        ExerciseItem selected_ex = { -1, "Not Found" };
-        for (int i=0; i < counts[part_index]; i++) {
-            if (db[part_index][i].id == choice) {
-                selected_ex = db[part_index][i];
-                break;
-            }
-        }
-
-        if (selected_ex.id == -1) {
-            printf("Invalid exercise ID.\n");
+        // Validate the user's choice (it's 1-based)
+        if (choice < 1 || choice > counts[part_index]) {
+            printf("Invalid exercise number.\n");
         } else {
-            // Malloc a new node for the workout log
+            // Convert 1-based choice to 0-based array index
+            ExerciseItem selected_ex = db[part_index][choice - 1];
+
             WorkoutLog* new_log = (WorkoutLog*) malloc(sizeof(WorkoutLog));
             if (!new_log) {
                 printf("Memory allocation failed!\n");
@@ -148,7 +147,7 @@ void add_workout_log(Member* member, ExerciseItem db[num_focus_areas][max_exerci
             clear_input_buffer();
             
             // Set data in the new log node
-            new_log->exercise_id = selected_ex.id;
+            new_log->exercise_id = selected_ex.id; // Store the real ID
             strcpy(new_log->exercise_name, selected_ex.name);
             new_log->pr_weight = update_pr(member, selected_ex.id, new_log->weight_used);
 
@@ -165,6 +164,7 @@ void add_workout_log(Member* member, ExerciseItem db[num_focus_areas][max_exerci
 
     } while (add_another == 'y' || add_another == 'Y');
 }
+
 
 void display_workout_plan(Member* member) {
      if (!member) return;
@@ -189,7 +189,6 @@ void display_workout_plan(Member* member) {
         printf("No workouts logged for this member yet.\n");
     }
 }
-
 void display_all_members(Member* head) {
     printf("\n--- All Gym Members ---\n");
     if (head == NULL) {
@@ -206,10 +205,11 @@ void display_all_members(Member* head) {
 }
 
 Member* search_member(Member* head, const char* name) {
-    Member* current = head;
+     Member* current = head;
     while (current != NULL) {
+        // Use strcmp for string comparison
         if (strcmp(current->name, name) == 0) {
-            return current; // member found
+            return current; // Found the member
         }
         current = current->next_member;
     }
@@ -228,7 +228,7 @@ void display_member_details(Member* member) {
     printf("  Weight: %.2f kg\n", member->weight);
     printf("  BMI: %.2f\n", member->bmi);
 
-    // Now display the member's logs
+    // Now display their logs
     display_workout_plan(member);
     display_diet_log(member);
 }
@@ -247,7 +247,7 @@ Member* delete_member(Member* head, const char* name) {
         return head;
     }
 
-    // Free all sub-lists (workouts and diets)
+    // Free all sub-lists (workouts and diets) for the member being deleted
     for (int i = 0; i < num_days; i++) {
         WorkoutLog *w_log = current->workout_heads[i];
         while (w_log != NULL) {
@@ -276,10 +276,10 @@ Member* delete_member(Member* head, const char* name) {
 }
 
 void free_all_memory(Member* head) {
-    Member *current = head;
-    while (current != NULL) {
-        Member *temp_member = current;
-        current = current->next_member;
+    Member *current_member = head;
+    while (current_member != NULL) {
+        Member *temp_member = current_member;
+        current_member = current_member->next_member; // Move to next before freeing
 
         // Free all sub-lists for this member
         for (int i = 0; i < num_days; i++) {
@@ -296,6 +296,7 @@ void free_all_memory(Member* head) {
                 free(temp_d);
             }
         }
-        free(temp_member); // Free the member itself
+        // Finally, free the member struct itself
+        free(temp_member);
     }
 }

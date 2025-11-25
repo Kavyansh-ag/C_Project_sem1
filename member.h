@@ -1,7 +1,11 @@
-#ifndef MEMBER_H
-#define MEMBER_H
+#ifndef MEMBER_H_
+#define MEMBER_H_
 
 #include "diet.h"
+
+#ifndef max_menu_items
+#define max_menu_items 25
+#endif
 
 #define max_exercise_per_category 10
 #define num_focus_areas 5 // Chest, Back, Legs, Shoulders, Arms
@@ -51,7 +55,7 @@ void free_all_memory(Member* head);
 void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]);
 void add_workout_log(Member* member, ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]);
 void display_workout_plan(Member* member);
-float update_pr(Member* member, int day_index, int exercise_id, float current_weight);
+float update_pr(Member* member, int exercise_id, float current_weight);
 //-------------------------------------------
 
 //utility functions:

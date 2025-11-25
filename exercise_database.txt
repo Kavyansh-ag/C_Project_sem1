@@ -1,0 +1,55 @@
+[CHEST]
+1,Bench Press
+2,Incline Dumbbell Press
+3,Push-up
+4,Dumbbell Flies
+5,Cable Crossover
+6,Chest Dips
+7,Decline Bench Press
+8,Pec Deck Machine
+9,Machine Chest Press
+10,Svend Press
+[LEGS]
+1,Back Squat
+2,Front Squat
+3,Leg Press
+4,Lunges
+5,Leg Extension
+6,Leg Curl
+7,Romanian Deadlift
+8,Calf Raise
+9,Hip Thrust
+10,Bulgarian Split Squat
+[SHOULDERS]
+1,Overhead Barbell Press
+2,Dumbbell Shoulder Press
+3,Lateral Raises
+4,Front Raises
+5,Rear Delt Fly
+6,Arnold Press
+7,Face Pull
+8,Smith Machine Shoulder Press
+9,Barbell Upright Row
+10,Seated Dumbbell Press
+[BACK]
+1,Pull-up
+2,Deadlift
+3,Bent-over Barbell Row
+4,Lat Pulldown
+5,T-Bar Row
+6,Seated Cable Row
+7,Single Arm Dumbbell Row
+8,Face Pulls
+9,Rack Pulls
+10,Lever seated reverse fly
+[ARMS]
+1,Barbell Curl
+2,Dumbbell Bicep Curl
+3,Hammer Curl
+4,Preacher Curl
+5,Skull Crushers
+6,Overhead Triceps Extension
+7,Diamond Push-up
+8,Wrist Curl
+9,Reverse Wrist Curl
+10,Plate Pinch
