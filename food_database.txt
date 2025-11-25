@@ -1,152 +1,153 @@
 [MONDAY]
-idli,1 piece,78
-medu vada,1 piece,100
-sambar,1 bowl,150
-boiled egg,1 piece,70
-bread,1 slice,65
-palak chapati,1 roti,115
-cholar dal,1 bowl,150
-aloo bhindi,1 bowl,150
-tomato rice,1 cup,300
-plain rice,1 cup,200
-dosakaya pappu,1 bowl,150
-banana milkshake,1 cup,75
-samosa chaat,1 serving,400
-masala chapati,1 roti,100
-kadai veg,1 bowl,150
-veg ball manchurian,1 bowl,450
-schezwan veg fried rice,1 cup,450
-plain rice,1 cup,200
-tomato pappu,1 bowl,150
-vathal kulambu style sambar,1 bowl,180
-gajar halwa,1 serving,250 
+idli,piece,78
+medu vada,piece,100
+sambar,bowl,150
+boiled egg,piece,70
+bread,slice,65
+palak chapati,roti,115
+cholar dal,bowl,150
+aloo bhindi,bowl,150
+tomato rice,cup,300
+plain rice,cup,200
+dosakaya pappu,bowl,150
+banana milkshake,cup,75
+samosa chaat,serving,400
+masala chapati,roti,100
+kadai veg,bowl,150
+veg ball manchurian,bowl,450
+schezwan veg fried rice,cup,450
+plain rice,cup,200
+tomato pappu,bowl,150
+vathal kulambu style sambar,bowl,180
+gajar halwa,serving,250 
 
 [TUESDAY]
-poha,1 cup,200
-aloo gobi paratha,1 roti,220
-bread,1 slice,65
-missi chapathi,1 roti,140
-ridge gourd palya,1 bowl,80
-butter vegetable masala,1 bowl,300
-veg biryani,1 cup,200
-plain rice,1 cup,200
-drumstick sambar,1 bowl,150 
-moong dal halwa,1 bowl,350
-vada pav,1 piece,300
-ajwain chapati,1 roti,110
-bhindi masala,1 bowl,150
-gobi mutter dry,1 bowl,180
-gongura rice,1 cup,220 
-steam rice,1 cup,210
-methi pappu,1 bowl,180
-sambar,1 bowl,150
-rasgulla,1 piece,130
+poha,cup,200
+aloo gobi paratha,roti,220
+bread,slice,65
+missi chapathi,roti,140
+ridge gourd palya,bowl,80
+butter vegetable masala,bowl,300
+veg biryani,cup,200
+plain rice,cup,200
+drumstick sambar,bowl,150 
+moong dal halwa,bowl,350
+vada pav,piece,300
+ajwain chapati,roti,110
+bhindi masala,bowl,150
+gobi mutter dry,bowl,180
+gongura rice,cup,220 
+steam rice,cup,210
+methi pappu,bowl,180
+sambar,bowl,150
+rasgulla,piece,130
 
 [WEDNESDAY]
-carrot and onion uthapam,1 piece,150
-pongal,1 bowl,260
-sambar,1 bowl,150 
-omlette,1 piece,100
-bread,1 slice,65
-jeera chapati,1 roti,110
-lobia masala,1 bowl,200
-veg poriyal,1 bowl,130
-curd rice,1 cup,220
-plain rice,1 cup,200
-methi pappu,1 bowl,180
-ada prathaman,1 bowl,250
-papadi chat,1 serving,320
-methi chapathi,1 roti,120
-bhagara rice,1 cup,260 
-plain rice,1 cup,200
-moong dal fry,1 bowl,180
-cashew paneer curry,1 bowl,330
-amruthsari murgh,1 bowl,280
-lemon mint,1 glass,12
+carrot and onion uthapam,piece,150
+pongal,bowl,260
+sambar,bowl,150 
+omlette,piece,100
+bread,slice,65
+jeera chapati,roti,110
+lobia masala,bowl,200
+veg poriyal,bowl,130
+curd rice,cup,220
+plain rice,cup,200
+methi pappu,bowl,180
+ada prathaman,bowl,250
+papadi chat,serving,320
+methi chapathi,roti,120
+bhagara rice,cup,260 
+plain rice,cup,200
+moong dal fry,bowl,180
+cashew paneer curry,bowl,330
+amruthsari murgh,bowl,280
+lemon mint,glass,12
 
 [THURSDAY]
-besan cheela,1 piece,130 
-masala upma,1 bowl,220
-sambar,1 cup,150
-bread,1 slice,65
-ajwain chapati,1 roti,110
-veg hyderabadi gravy,1 bowl,240
-aloo jeera,1 bowl,180
-puliogare,1 bowl,240
-plain rice,1 cup,200
-yellow dal fry,1 bowl,180
-rajma masala,1 bowl,230
-fruit punch,1 glass,50
-dal pakwaan,1 serving,400
-masala chapati,1 roti,160
-chana masala,1 bowl,230
-gobi 65,1 bowl,250
-vangi bath,1 bowl,250
-plain rice,1 cup,200
-dal fry,1 bowl,180
-malpua,1 piece,145
+besan cheela,piece,130 
+masala upma,bowl,220
+sambar,cup,150
+bread,slice,65
+ajwain chapati,roti,110
+veg hyderabadi gravy,bowl,240
+aloo jeera,bowl,180
+puliogare,bowl,240
+plain rice,cup,200
+yellow dal fry,bowl,180
+rajma masala,bowl,230
+fruit punch,glass,50
+dal pakwaan,serving,400
+masala chapati,roti,160
+chana masala,bowl,230
+gobi 65,bowl,250
+vangi bath,bowl,250
+plain rice,cup,200
+dal fry,bowl,180
+malpua,piece,145
 
 [FRIDAY]
-aloo onion paratha,1 roti,240
-semiyabath,1 bowl,220
-egg bhurji,1 cup,110
-bread,1 slice,65
-jeera chapati,1 roti,110
-egg curry,1 bowl,160
-soya curry,1 bowl,220
-brinjal thovayal,1 bowl,100
-bisi bele bath with kara boondi,1 bowl,300
-plain rice,1 cup,200
-palak pappu,1 bowl,180
-ice cream,1 scoop,135
-boiled peanut,1 serving,150
-ajwain chapati,1 roti,110 
-plain rice,1 cup,200
-masoor dal fry,1 bowl,180
-jalebi,1 piece,150
-paneer kolhapuri,1 bowl,330
-veg biryani,1 cup,220
-chicken kurma,1 bowl,300
+aloo onion paratha,roti,240
+semiyabath,bowl,220
+egg bhurji,cup,110
+bread,slice,65
+jeera chapati,roti,110
+egg curry,bowl,160
+soya curry,bowl,220
+brinjal thovayal,bowl,100
+bisi bele bath with kara boondi,bowl,300
+plain rice,cup,200
+palak pappu,bowl,180
+ice cream,scoop,135
+boiled peanut,erving,150
+ajwain chapati,roti,110 
+plain rice,cup,200
+masoor dal fry,bowl,180
+jalebi,piece,150
+paneer kolhapuri,bowl,330
+veg biryani,cup,220
+chicken kurma,bowl,300
+
 [SATURDAY]
-palak dosa,1 piece,100
-aloo sandwich,1 piece,250
-bread,1 slice,65
-poori,1 serving,90
-aloo mutter,1 bowl,210
-raw banana poriyal,1 bowl,180
-lemon rice,1 bowl,210
-plain rice,1 cup,200
-garlic dal fry,1 bowl,200
-semiya payasam,1 bowl,250
-pani puri,1 piece,35
-chapati,1 roti,100
-palak kadai,1 bowl,220
-peas pulao,1 bowl,220
-plain rice,1 cup,200
-mixed dal fry,1 bowl,200
-kerala sambar,1 bowl,160
-kalakand,1 serving,200
+palak dosa,piece,100
+aloo sandwich,piece,250
+bread,slice,65
+poori,serving,90
+aloo mutter,bowl,210
+raw banana poriyal,bowl,180
+lemon rice,bowl,210
+plain rice,cup,200
+garlic dal fry,bowl,200
+semiya payasam,bowl,250
+pani puri,piece,35
+chapati,roti,100
+palak kadai,bowl,220
+peas pulao,bowl,220
+plain rice,cup,200
+mixed dal fry,bowl,200
+kerala sambar,bowl,160
+kalakand,serving,200
 
 [SUNDAY]
-podi masala dosa,1 piece,400
-sambar,1 bowl,150
-banana,1 piece,60
-bread,1 slice,65
-bhature,1 piece,250
-pindi chole,1 bowl,230
-aloo methi,1 bowl,180
-veg pulao,1 cup,230
-plain rice,1 cup,200
-toor dal fry,1 bowl,190
-lassi,1 glass,130
-gulab jamun,1 piece,200 
-chana dal chat,1 serving,200
-lacha paratha,1 roti,280
-veg chettinad,1 bowl,240
-plain rice,1 cup,200
-dal tadka,1 bowl,220
-bread halwa,1 bowl,300
-kadhai paneer,1 bowl,330
-chicken do pyaza,1 bowl,300
+podi masala dosa,piece,400
+sambar,bowl,150
+banana,piece,60
+bread,slice,65
+bhature,piece,250
+pindi chole,bowl,230
+aloo methi,bowl,180
+veg pulao,cup,230
+plain rice,cup,200
+toor dal fry,bowl,190
+lassi,glass,130
+gulab jamun,piece,200 
+chana dal chat,serving,200
+lacha paratha,roti,280
+veg chettinad,bowl,240
+plain rice,cup,200
+dal tadka,bowl,220
+bread halwa,bowl,300
+kadhai paneer,bowl,330
+chicken do pyaza,bowl,300
 
 
