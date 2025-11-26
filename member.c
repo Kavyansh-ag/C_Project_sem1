@@ -60,7 +60,8 @@ Member* add_new_member(Member* head) {
         printf("Error: Memory allocation failed!\n");
         return head; // Return original list
     }
-
+    
+    clear_input_buffer();
     printf("Enter member's name: ");
     fgets(newNode->name, 50, stdin);
     newNode->name[strcspn(newNode->name, "\n")] = 0; // Remove newline

@@ -32,8 +32,16 @@ int get_day_index() {
         printf("  5: Friday\n");
         printf("  6: Saturday\n");
         printf("Enter your choice (0-6): ");
-        scanf("%d", &choice);
-        clear_input_buffer(); 
+        // scanf("%d", &choice);
+        // clear_input_buffer(); 
+        if (scanf("%d", &choice) != 1) {
+        printf("Invalid input. Please enter digits only.\n");
+        clear_input_buffer();
+        choice = -1;   // Force invalid condition
+        continue;
+}
+clear_input_buffer();
+
 
         if (choice < 0 || choice > 6) {
             printf("Invalid choice. Please enter a number between 0 and 6.\n");
@@ -52,8 +60,16 @@ int get_body_part_index() {
         printf("  3: Arms\n");
         printf("  4: Shoulders\n");
         printf("Enter your choice (0-4): ");
-        scanf("%d", &choice);
+        // scanf("%d", &choice);
+        // clear_input_buffer();
+        if (scanf("%d", &choice) != 1) {
+        printf("Invalid input. Please enter numbers only.\n");
         clear_input_buffer();
+        choice = -1;
+        continue;
+}
+clear_input_buffer();
+
 
         if (choice < 0 || choice > 4) {
             printf("Invalid choice. Please enter a number between 0 and 4.\n");
