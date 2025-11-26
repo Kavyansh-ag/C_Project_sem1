@@ -3,7 +3,6 @@
 #include <string.h>
 #include "diet.h"
 #include "member.h"
-// #include "gym.h"
 #include "types.h"
 #include "utility_functions.h"
 #include "file_IO.h"

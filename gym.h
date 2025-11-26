@@ -3,51 +3,6 @@
 #include "types.h"
 #include "constants.h"   // for num_days, num_focus_areas, etc.
 
-// #define num_days 7
-// #define num_focus_areas 6
-// #define max_exercise_per_category 20
-
-// typedef struct WorkoutLog {
-//     int exercise_id;
-//     char exercise_name[50];
-//     int sets;
-//     int reps;
-//     float weight_used;
-//     float pr_weight;
-//     struct WorkoutLog* next_workout;
-// } WorkoutLog;
-
-// typedef struct DietLog {
-//     char food_name[50];
-//     float calories;
-//     struct DietLog* next_diet_log;
-// } DietLog;
-
-// typedef struct ExerciseItem {
-//     int id;
-//     char name[50];
-//     char muscle_group[50];
-// } ExerciseItem;
-
-// typedef struct FoodItem {
-//     char name[50];
-//     float calories;
-// } FoodItem;
-
-// typedef struct Member {
-//     char name[50];
-//     int age;
-//     char sex[10];
-//     float height;
-//     float weight;
-//     float bmi;
-
-//     WorkoutLog* workout_heads[num_days];
-//     DietLog* diet_heads[num_days];
-
-//     struct Member* next_member;
-// } Member;
-
 /* Function declarations used everywhere */
 
 void clear_input_buffer();

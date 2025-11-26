@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// #include "diet.h"  //member.h is indirectly included in this
-// #include "gym.h"
 #include "types.h"
 #include "member.h"
 #include "constants.h"
@@ -32,7 +30,6 @@ void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_catego
         else if (current_part_index != -1 && counts[current_part_index] < max_exercise_per_category) {
             // This is a data line for the current category
             int ex_idx = counts[current_part_index];
-            // sscanf(line, "%d,%49[^]", &db[current_part_index][ex_idx].id, db[current_part_index][ex_idx].name);
             sscanf(line, "%d,%49[^,]", 
             &db[current_part_index][ex_idx].id,
             db[current_part_index][ex_idx].name);

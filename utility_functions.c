@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "member.h"
-// #include "gym.h"
 #include "utility_functions.h"
 #include "types.h"
 #include "constants.h"
@@ -37,8 +36,6 @@ int get_day_index() {
         printf("  5: Friday\n");
         printf("  6: Saturday\n");
         printf("Enter your choice (0-6): ");
-        // scanf("%d", &choice);
-        // clear_input_buffer(); 
         if (scanf("%d", &choice) != 1) {
         printf("Invalid input. Please enter digits only.\n");
         clear_input_buffer();
@@ -65,8 +62,6 @@ int get_body_part_index() {
         printf("  3: Arms\n");
         printf("  4: Shoulders\n");
         printf("Enter your choice (0-4): ");
-        // scanf("%d", &choice);
-        // clear_input_buffer();
         if (scanf("%d", &choice) != 1) {
         printf("Invalid input. Please enter numbers only.\n");
         clear_input_buffer();

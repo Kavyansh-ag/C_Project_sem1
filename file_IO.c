@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// #include "diet.h"
-// #include "gym.h"
 #include "types.h"
 #include "file_IO.h"
 
