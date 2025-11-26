@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "member.h"
+// #include "gym.h"
+#include "utility_functions.h"
+#include "types.h"
+#include "constants.h"
+
 
 
 

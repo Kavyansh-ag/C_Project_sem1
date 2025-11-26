@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "diet.h"
+#include "member.h"
+// #include "gym.h"
+#include "types.h"
+#include "utility_functions.h"
+#include "file_IO.h"
+
+
 
 void display_main_menu() {
     printf("\n===== Gym Management System =====\n");

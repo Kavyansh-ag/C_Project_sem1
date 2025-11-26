@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "diet.h"  //member.h is indirectly included in this
+// #include "diet.h"  //member.h is indirectly included in this
+// #include "gym.h"
+#include "types.h"
+#include "member.h"
+#include "constants.h"
+#include "diet.h"
+
 
 void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]) {
     FILE *file = fopen("exercise_database.txt", "r");
@@ -26,7 +32,11 @@ void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_catego
         else if (current_part_index != -1 && counts[current_part_index] < max_exercise_per_category) {
             // This is a data line for the current category
             int ex_idx = counts[current_part_index];
-            sscanf(line, "%d,%49[^]", &db[current_part_index][ex_idx].id, db[current_part_index][ex_idx].name);
+            // sscanf(line, "%d,%49[^]", &db[current_part_index][ex_idx].id, db[current_part_index][ex_idx].name);
+            sscanf(line, "%d,%49[^,]", 
+            &db[current_part_index][ex_idx].id,
+            db[current_part_index][ex_idx].name);
+
             counts[current_part_index]++;
         }
     }
@@ -60,7 +70,7 @@ Member* add_new_member(Member* head) {
         printf("Error: Memory allocation failed!\n");
         return head; // Return original list
     }
-    
+
     clear_input_buffer();
     printf("Enter member's name: ");
     fgets(newNode->name, 50, stdin);
@@ -190,6 +200,7 @@ void display_workout_plan(Member* member) {
         printf("No workouts logged for this member yet.\n");
     }
 }
+
 void display_all_members(Member* head) {
     printf("\n--- All Gym Members ---\n");
     if (head == NULL) {

@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "diet.h"
+// #include "gym.h"
+#include "types.h"
+#include "utility_functions.h"
+
 
 void load_food_database(FoodItem daily_menus[num_days][max_menu_items], int menu_item_counts[num_days]) {
     FILE* file = fopen("food_database.txt", "r");

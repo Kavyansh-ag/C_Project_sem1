@@ -1,46 +1,41 @@
-#ifndef MEMBER_H_
-#define MEMBER_H_
+#ifndef MEMBER_H
+#define MEMBER_H
 
-#include "diet.h"
+#include "constants.h"
+#include "types.h"
+// #include "diet.h"    // Now safe because diet.h does NOT include member.h
 
-#ifndef max_menu_items
-#define max_menu_items 25
-#endif
+// typedef struct ExerciseItem {
+//     int id;
+//     char name[50];
+// } ExerciseItem;
 
-#define max_exercise_per_category 10
-#define num_focus_areas 5 // Chest, Back, Legs, Shoulders, Arms
+// typedef struct WorkoutLog {
+//     int exercise_id;
+//     char exercise_name[50]; // Copied for easier display
+//     int sets;
+//     int reps;
+//     float weight_used;
+//     float pr_weight; // Personal Record for this exercise
+//     struct WorkoutLog *next_workout;
+// } WorkoutLog;
 
-typedef struct ExerciseItem {
-    int id;
-    char name[50];
-} ExerciseItem;
+// struct DietLog; //for def refer diet.h
+// //DietLof is declared here so that Member struct can have pointer to DietLog
 
-typedef struct WorkoutLog {
-    int exercise_id;
-    char exercise_name[50]; // Copied for easier display
-    int sets;
-    int reps;
-    float weight_used;
-    float pr_weight; // Personal Record for this exercise
-    struct WorkoutLog *next_workout;
-} WorkoutLog;
+// #define num_days 7 //constant for days in a week
 
-struct DietLog; //for def refer diet.h
-//DietLof is declared here so that Member struct can have pointer to DietLog
-
-#define num_days 7 //constant for days in a week
-
-typedef struct Member {
-    char name[50];
-    int age;
-    char sex[10];
-    float height;  // in m
-    float weight;  // in kg
-    float bmi;
-    WorkoutLog *workout_heads[num_days]; // array of head pointers for workout LLs of each day
-    struct DietLog *diet_heads[num_days]; // array of head pointers for diet LLs of each day
-    struct Member *next_member;
-} Member;
+// typedef struct Member {
+//     char name[50];
+//     int age;
+//     char sex[10];
+//     float height;  // in m
+//     float weight;  // in kg
+//     float bmi;
+//     WorkoutLog *workout_heads[num_days]; // array of head pointers for workout LLs of each day
+//     struct DietLog *diet_heads[num_days]; // array of head pointers for diet LLs of each day
+//     struct Member *next_member;
+// } Member;
 
 //member functions:
 Member* add_new_member(Member* head);
