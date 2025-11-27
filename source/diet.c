@@ -1,9 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
+///////////////////////////////////////////
 #include "../headers/diet.h"
 #include "../headers/types.h"
 #include "../headers/utility_functions.h"
+///////////////////////////////////////////
+
 
 
 void load_food_database(FoodItem daily_menus[num_days][max_menu_items], int menu_item_counts[num_days]) {
@@ -43,7 +49,7 @@ void load_food_database(FoodItem daily_menus[num_days][max_menu_items], int menu
     }
     fclose(file);
 }
-    
+
 
 void log_food_item(Member* member, FoodItem daily_menus[num_days][max_menu_items], int menu_item_counts[num_days]) {
     if (!member) {
@@ -104,6 +110,7 @@ void log_food_item(Member* member, FoodItem daily_menus[num_days][max_menu_items
     }
 }
 
+
 void display_diet_log(Member* member) {
     if (!member) return;
     char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
@@ -128,7 +135,8 @@ void display_diet_log(Member* member) {
     }
 }
 
-void calculate_total_calories(Member* member) {
+
+void calculate_total_calories(Member* member){
     if (!member) return;
     
     printf("Which day would you like to calculate total calories for?\n");

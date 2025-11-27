@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
+///////////////////////////////////////////
 #include "../headers/diet.h"
 #include "../headers/member.h"
 #include "../headers/types.h"
 #include "../headers/utility_functions.h"
 #include "../headers/file_IO.h"
+///////////////////////////////////////////
 
 
 
@@ -22,6 +27,8 @@ void display_main_menu() {
     printf("=================================\n");
     printf("Enter your choice: ");
 }
+
+
 
 int main() {
     Member* member_list_head = NULL;

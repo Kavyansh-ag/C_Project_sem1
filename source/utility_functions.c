@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
+///////////////////////////////////////////
 #include "../headers/member.h"
 #include "../headers/utility_functions.h"
 #include "../headers/types.h"
 #include "../headers/constants.h"
-
+///////////////////////////////////////////
 
 
 
@@ -17,12 +21,11 @@ float calculate_bmi(float height, float weight)
 }
 
 
-/* This reads and discards characters from the input stream
-    until it hits a newline or the end of the file */
 void clear_input_buffer(){
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
+
 
 int get_day_index() {
     int choice;
@@ -51,6 +54,7 @@ clear_input_buffer();
     } while (choice < 0 || choice > 6);
     return choice;
 }
+
 
 int get_body_part_index() {
     int choice = -1;

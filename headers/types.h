@@ -1,6 +1,7 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+
 #include "constants.h"
 
 
@@ -9,12 +10,14 @@ typedef struct ExerciseItem {
     char name[50];
 } ExerciseItem;
 
+
 typedef struct FoodItem {
     int food_id;  // 1, 2, 3... within each day's menu
     char name[50];
     char unit[20]; // e.g., "1 piece", "cup", "1 serving", bowl
     float calories_per_unit;
 } FoodItem;
+
 
 typedef struct DietLog {
     int food_id; // References a FoodItem
@@ -23,6 +26,7 @@ typedef struct DietLog {
     float total_calories;
     struct DietLog *next_diet_log;
 } DietLog;
+
 
 typedef struct WorkoutLog {
     int exercise_id;
@@ -33,6 +37,7 @@ typedef struct WorkoutLog {
     float pr_weight; // Personal Record for this exercise
     struct WorkoutLog *next_workout;
 } WorkoutLog;
+
 
 typedef struct Member {
     char name[50];
@@ -45,5 +50,6 @@ typedef struct Member {
     struct DietLog *diet_heads[num_days]; // array of head pointers for diet LLs of each day
     struct Member *next_member;
 } Member;
+
 
 #endif

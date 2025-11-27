@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
+///////////////////////////////////////////
 #include "../headers/types.h"
 #include "../headers/file_IO.h"
+///////////////////////////////////////////
 
 
 
@@ -46,6 +51,7 @@ void save_data(Member* head) {
     fclose(file);
     printf("Data saved successfully.\n");
 }
+
 
 Member* load_data(ExerciseItem exercise_db[num_focus_areas][max_exercise_per_category], FoodItem daily_menus[num_days][25]) {
     FILE* file = fopen("database/gym_data.txt", "r");

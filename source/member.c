@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
+///////////////////////////////////////////
 #include "../headers/types.h"
 #include "../headers/member.h"
 #include "../headers/constants.h"
 #include "../headers/diet.h"
+///////////////////////////////////////////
+
 
 
 void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]) {
@@ -41,6 +47,7 @@ void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_catego
     fclose(file);
 }
 
+
 float update_pr(Member* member, int exercise_id, float current_weight) {
     
     float max_pr = current_weight;
@@ -59,6 +66,7 @@ float update_pr(Member* member, int exercise_id, float current_weight) {
     }
     return max_pr;
 }
+
 
 Member* add_new_member(Member* head) {
 
@@ -104,7 +112,8 @@ Member* add_new_member(Member* head) {
 
     return newNode; // The new node is now the head
 }
-    
+
+
 void add_workout_log(Member* member, ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]) {
     if (member == NULL) {
         printf("Error: No member selected.\n");
@@ -198,6 +207,7 @@ void display_workout_plan(Member* member) {
     }
 }
 
+
 void display_all_members(Member* head) {
     printf("\n--- All Gym Members ---\n");
     if (head == NULL) {
@@ -213,6 +223,7 @@ void display_all_members(Member* head) {
     }
 }
 
+
 Member* search_member(Member* head, const char* name) {
      Member* current = head;
     while (current != NULL) {
@@ -224,7 +235,8 @@ Member* search_member(Member* head, const char* name) {
     }
     return NULL; // Member not found
 }
-    
+
+
 void display_member_details(Member* member) {
     if (member == NULL) {
         printf("Member not found or specified.\n");
@@ -241,6 +253,7 @@ void display_member_details(Member* member) {
     display_workout_plan(member);
     display_diet_log(member);
 }
+
 
 Member* delete_member(Member* head, const char* name) {
     Member *current = head;
@@ -283,6 +296,7 @@ Member* delete_member(Member* head, const char* name) {
     printf("Member '%s' has been deleted.\n", name);
     return head;
 }
+
 
 void free_all_memory(Member* head) {
     Member *current_member = head;
