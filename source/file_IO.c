@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "types.h"
-#include "file_IO.h"
+#include "../headers/types.h"
+#include "../headers/file_IO.h"
 
 
 
 void save_data(Member* head) {
-    FILE* file = fopen("gym_data.txt", "w");
+    FILE* file = fopen("database/gym_data.txt", "w");
     if (!file) {
         printf("Error: Could not open gym_data.txt for writing.\n");
         return;
@@ -48,7 +48,7 @@ void save_data(Member* head) {
 }
 
 Member* load_data(ExerciseItem exercise_db[num_focus_areas][max_exercise_per_category], FoodItem daily_menus[num_days][25]) {
-    FILE* file = fopen("gym_data.txt", "r");
+    FILE* file = fopen("database/gym_data.txt", "r");
     if (!file) {
         printf("No existing save file found. Starting fresh.\n");
         return NULL;

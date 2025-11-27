@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "member.h": "c",
+        "utility_functions.h": "c",
+        "file_io.h": "c",
+        "constants.h": "c",
+        "diet.h": "c",
+        "types.h": "c"
+    }
+}

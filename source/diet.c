@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "diet.h"
-#include "types.h"
-#include "utility_functions.h"
+#include "../headers/diet.h"
+#include "../headers/types.h"
+#include "../headers/utility_functions.h"
 
 
 void load_food_database(FoodItem daily_menus[num_days][max_menu_items], int menu_item_counts[num_days]) {
-    FILE* file = fopen("food_database.txt", "r");
+    FILE* file = fopen("database/food_database.txt", "r");
     if (file == NULL) {
         printf("Error: Could not open food_database.txt\n");
         return;

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "diet.h"
-#include "member.h"
-#include "types.h"
-#include "utility_functions.h"
-#include "file_IO.h"
+#include "../headers/diet.h"
+#include "../headers/member.h"
+#include "../headers/types.h"
+#include "../headers/utility_functions.h"
+#include "../headers/file_IO.h"
 
 
 

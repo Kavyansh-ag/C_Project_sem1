@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "types.h"
-#include "member.h"
-#include "constants.h"
-#include "diet.h"
+#include "../headers/types.h"
+#include "../headers/member.h"
+#include "../headers/constants.h"
+#include "../headers/diet.h"
 
 
 void load_all_exercises(ExerciseItem db[num_focus_areas][max_exercise_per_category], int counts[num_focus_areas]) {
-    FILE *file = fopen("exercise_database.txt", "r");
+    FILE *file = fopen("database/exercise_database.txt", "r");
     if (file == NULL) {
         printf("Error: Could not open exercise_database.txt\n");
         return;

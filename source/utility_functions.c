@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "member.h"
-#include "utility_functions.h"
-#include "types.h"
-#include "constants.h"
+#include "../headers/member.h"
+#include "../headers/utility_functions.h"
+#include "../headers/types.h"
+#include "../headers/constants.h"
 
 
 
